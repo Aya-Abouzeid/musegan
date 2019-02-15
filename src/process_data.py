@@ -21,7 +21,7 @@ def parse_arguments():
 def main():
     """Main function"""
     filepath, name, prefix, dtype = parse_arguments()
-
+    sa.delete("train_x_lpd_5_phr")
     if name is None:
         name = os.path.splitext(os.path.basename(filepath))[0]
         if prefix is not None:
